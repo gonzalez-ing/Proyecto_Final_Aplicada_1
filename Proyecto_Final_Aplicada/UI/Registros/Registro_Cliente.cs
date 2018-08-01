@@ -150,6 +150,7 @@ namespace Proyecto_Final_Aplicada.IU.Registros
                 MessageBox.Show("No se puede eliminar", "Hay Problemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             LimpiarProvider();
         }
-        
+
+
     }
 }

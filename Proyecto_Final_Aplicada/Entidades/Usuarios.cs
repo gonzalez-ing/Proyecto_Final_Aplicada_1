@@ -15,5 +15,11 @@ namespace Proyecto_Final_Aplicada.Entidades
             public string Usuario { get; set; }
             public string Clave { get; set; }
 
-        }    
+
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
+
+    }    
 }

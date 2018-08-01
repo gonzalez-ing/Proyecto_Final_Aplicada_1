@@ -42,10 +42,10 @@
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaDeProductosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.puntoDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entradaDeProductosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +148,7 @@
             // 
             this.articulosToolStripMenuItem1.Image = global::Proyecto_Final_Aplicada.Properties.Resources.chat_tay_rua_anh_huong_den_suc_khoe_thai_nhi;
             this.articulosToolStripMenuItem1.Name = "articulosToolStripMenuItem1";
-            this.articulosToolStripMenuItem1.Size = new System.Drawing.Size(159, 24);
+            this.articulosToolStripMenuItem1.Size = new System.Drawing.Size(258, 24);
             this.articulosToolStripMenuItem1.Text = "Productos";
             this.articulosToolStripMenuItem1.Click += new System.EventHandler(this.articulosToolStripMenuItem1_Click);
             // 
@@ -156,7 +156,7 @@
             // 
             this.usuarioToolStripMenuItem.Image = global::Proyecto_Final_Aplicada.Properties.Resources.UserNoSign;
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
@@ -164,7 +164,7 @@
             // 
             this.clientesToolStripMenuItem1.Image = global::Proyecto_Final_Aplicada.Properties.Resources.client_1295901_960_720;
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(159, 24);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(258, 24);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
@@ -172,9 +172,17 @@
             // 
             this.facturasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasToolStripMenuItem.Image")));
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
+            // 
+            // entradaDeProductosToolStripMenuItem1
+            // 
+            this.entradaDeProductosToolStripMenuItem1.Image = global::Proyecto_Final_Aplicada.Properties.Resources.chat_tay_rua_anh_huong_den_suc_khoe_thai_nhi;
+            this.entradaDeProductosToolStripMenuItem1.Name = "entradaDeProductosToolStripMenuItem1";
+            this.entradaDeProductosToolStripMenuItem1.Size = new System.Drawing.Size(258, 24);
+            this.entradaDeProductosToolStripMenuItem1.Text = "Entrada De Productos";
+            this.entradaDeProductosToolStripMenuItem1.Click += new System.EventHandler(this.entradaDeProductosToolStripMenuItem1_Click);
             // 
             // puntoDeVentasToolStripMenuItem
             // 
@@ -208,14 +216,6 @@
             this.ayudaToolStripMenuItem.Text = "Salir";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
-            // entradaDeProductosToolStripMenuItem1
-            // 
-            this.entradaDeProductosToolStripMenuItem1.Image = global::Proyecto_Final_Aplicada.Properties.Resources.chat_tay_rua_anh_huong_den_suc_khoe_thai_nhi;
-            this.entradaDeProductosToolStripMenuItem1.Name = "entradaDeProductosToolStripMenuItem1";
-            this.entradaDeProductosToolStripMenuItem1.Size = new System.Drawing.Size(258, 24);
-            this.entradaDeProductosToolStripMenuItem1.Text = "Entrada De Productos";
-            this.entradaDeProductosToolStripMenuItem1.Click += new System.EventHandler(this.entradaDeProductosToolStripMenuItem1_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -231,6 +231,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

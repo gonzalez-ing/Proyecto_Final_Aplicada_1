@@ -1,11 +1,13 @@
 ﻿using Proyecto_Final_Aplicada.DAL;
 using Proyecto_Final_Aplicada.Entidades;
+using Proyecto_Final_Aplicada.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +18,7 @@ namespace Proyecto_Final_Aplicada.UI.Registros
     {
         decimal ITBIS = 0;
         decimal Total = 0;
+        Expression<Func<Facturas, bool>> filtral = x => 1 == 1;
         public Registro_FacturaDetalle()
         {
             InitializeComponent();
@@ -71,16 +74,11 @@ namespace Proyecto_Final_Aplicada.UI.Registros
                 facturas.AgregarDetalle
                     (ToInt(item.Cells["id"].Value),
                      facturas.FacturaId,
-                     ToInt(item.Cells["UsuarioId"].Value),
                        ToInt(item.Cells["ClienteId"].Value),
                        ToInt(item.Cells["ProductoId"].Value),
-                       Convert.ToString(item.Cells["Producto"].Value),
                        ToInt(item.Cells["cantidad"].Value),
                     Convert.ToDecimal(item.Cells["precio"].Value),
-                    ToInt(item.Cells["Importe"].Value)
-
-
-
+                    Convert.ToInt32(item.Cells["Importe"].Value)
                   );
             }
             return facturas;
@@ -137,17 +135,13 @@ namespace Proyecto_Final_Aplicada.UI.Registros
                 Detalle = (List<FacturasDetalle>)DetalledataGridView.DataSource;
             }
 
-
-
             foreach (var item in BLL.ProductosBLL.GetList(x => x.Inventario < CantidadnumericUpDown.Value))
             {
 
-                MessageBox.Show("No hay Producto",
+                MessageBox.Show("No Existe Producto Suficiente",
                     "validar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
 
             if (string.IsNullOrEmpty(ImportetextBox.Text))
             {
@@ -156,14 +150,12 @@ namespace Proyecto_Final_Aplicada.UI.Registros
             }
             else
             {
-                Detalle.Add(
-                    new FacturasDetalle(id: 0,
-                    facturaId: (int)Convert.ToInt32(IdnumericUpDown.Value),
-                    productoId: (int)ProductocomboBox.SelectedValue,
-                    usuarioId: (int)UsuariocomboBox.SelectedValue,
+                Detalle.Add( new FacturasDetalle(
+                           id: 0,
+                    facturaId: (int)IdnumericUpDown.Value,
                     clienteId: (int)ClientecomboBox.SelectedValue,
-                    producto: (string)BLL.ProductosBLL.RetornarDescripcion(ProductocomboBox.Text),
-                    cantidad: (int)Convert.ToInt32(CantidadnumericUpDown.Value),
+                    productoId: (int)ProductocomboBox.SelectedValue,
+                    cantidad: (int)CantidadnumericUpDown.Value,
                      precio: (decimal)Convert.ToDecimal(PreciotextBox.Text),
                     importe: (decimal)Convert.ToDecimal(ImportetextBox.Text)
 
@@ -252,8 +244,6 @@ namespace Proyecto_Final_Aplicada.UI.Registros
 
                 Facturas facturas = LlenaClase();
                 bool Paso = false;
-
-
 
                 if (IdnumericUpDown.Value == 0)
                 {
@@ -372,5 +362,12 @@ namespace Proyecto_Final_Aplicada.UI.Registros
 
             return paso;
         }
+
+        private void Reportebutton_Click(object sender, EventArgs e)
+        {
+            ReportesRecibos abrir = new ReportesRecibos(BLL.FacturasBLL.GetList(filtral));
+            abrir.Show();
+        }
+
     }
 }

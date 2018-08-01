@@ -36,5 +36,10 @@ namespace Proyecto_Final_Aplicada.Entidades
             this.Fecha = DateTime.Now;
  
         }
+
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Final_Aplicada.UI.Reportes
 {
-    public partial class ReportesFacturas : Form
+    public partial class ReportesRecibos : Form
     {
         List<Facturas> datos = new List<Facturas>();
 
-        public ReportesFacturas(List<Facturas> log)
+        public ReportesRecibos(List<Facturas> log)
         {
             InitializeComponent();
             datos = log;
@@ -23,7 +23,7 @@ namespace Proyecto_Final_Aplicada.UI.Reportes
 
         private void ReporteLogInViewer_Load(object sender, EventArgs e)
         {
-            ReporteFacturas abrir = new ReporteFacturas();
+            ReporteRecibo abrir = new ReporteRecibo();
             abrir.SetDataSource(datos);
             ReporteLogInViewer.ReportSource = abrir;
             ReporteLogInViewer.Refresh();

@@ -41,9 +41,9 @@ namespace Proyecto_Final_Aplicada.Entidades
             Detalle = new List<FacturasDetalle>();
         }
 
-        public void AgregarDetalle(int id, int usuarioId, int FacturaId, int ClienteId, int ProductoId, string Producto,  int cantidad, decimal precio, int importe)
+        public void AgregarDetalle(int id, int FacturaId, int ClienteId, int ProductoId,  int cantidad, decimal precio, int importe)
         {
-            this.Detalle.Add(new FacturasDetalle(id, usuarioId, FacturaId, ClienteId, ProductoId, Producto, cantidad, precio, importe));
+            this.Detalle.Add(new FacturasDetalle(id, FacturaId, ClienteId, ProductoId, cantidad, precio, importe));
         }
     }
 }

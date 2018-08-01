@@ -153,10 +153,10 @@
       <DependentUpon>ReporteClientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Reportes\ReporteFacturas.cs">
+    <Compile Include="UI\Reportes\ReporteRecibo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ReporteFacturas.rpt</DependentUpon>
+      <DependentUpon>ReporteRecibo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Reportes\ReporteProductos.cs">
@@ -183,11 +183,11 @@
       <DependentUpon>ReportesEntradasProductos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Reportes\ReportesFacturas.cs">
+    <Compile Include="UI\Reportes\ReportesRecibos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Reportes\ReportesFacturas.Designer.cs">
-      <DependentUpon>ReportesFacturas.cs</DependentUpon>
+    <Compile Include="UI\Reportes\ReportesRecibos.Designer.cs">
+      <DependentUpon>ReportesRecibos.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Reportes\ReportesProducto.cs">
       <SubType>Form</SubType>
@@ -257,9 +257,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteClientes.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\ReporteFacturas.rpt">
+    <EmbeddedResource Include="UI\Reportes\ReporteRecibo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReporteFacturas.cs</LastGenOutput>
+      <LastGenOutput>ReporteRecibo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReporteProductos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -275,8 +275,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportesEntradasProductos.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\ReportesFacturas.resx">
-      <DependentUpon>ReportesFacturas.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Reportes\ReportesRecibos.resx">
+      <DependentUpon>ReportesRecibos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReportesProducto.resx">
       <DependentUpon>ReportesProducto.cs</DependentUpon>

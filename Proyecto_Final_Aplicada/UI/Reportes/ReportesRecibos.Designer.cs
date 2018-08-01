@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Final_Aplicada.UI.Reportes
 {
-    partial class ReportesFacturas
+    partial class ReportesRecibos
     {
         /// <summary>
         /// Required designer variable.

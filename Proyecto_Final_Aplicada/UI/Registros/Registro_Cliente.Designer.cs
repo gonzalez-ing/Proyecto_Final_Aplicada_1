@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_Cliente));
             this.TelefonoTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.CedulaTextBox = new System.Windows.Forms.MaskedTextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.IdErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.OtroErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CedulaTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdErrorProvider)).BeginInit();
@@ -59,18 +59,10 @@
             // TelefonoTextBox
             // 
             this.TelefonoTextBox.Location = new System.Drawing.Point(59, 196);
-            this.TelefonoTextBox.Mask = "(999)000-00000";
+            this.TelefonoTextBox.Mask = "(999)000-0000";
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(313, 20);
             this.TelefonoTextBox.TabIndex = 23;
-            // 
-            // CedulaTextBox
-            // 
-            this.CedulaTextBox.Location = new System.Drawing.Point(59, 165);
-            this.CedulaTextBox.Mask = "000-00000000-0";
-            this.CedulaTextBox.Name = "CedulaTextBox";
-            this.CedulaTextBox.Size = new System.Drawing.Size(313, 20);
-            this.CedulaTextBox.TabIndex = 22;
             // 
             // DirecciontextBox
             // 
@@ -260,6 +252,14 @@
             this.OtroErrorProvider.ContainerControl = this;
             this.OtroErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("OtroErrorProvider.Icon")));
             // 
+            // CedulaTextBox
+            // 
+            this.CedulaTextBox.Location = new System.Drawing.Point(59, 165);
+            this.CedulaTextBox.Mask = "000-0000000-0";
+            this.CedulaTextBox.Name = "CedulaTextBox";
+            this.CedulaTextBox.Size = new System.Drawing.Size(313, 20);
+            this.CedulaTextBox.TabIndex = 22;
+            // 
             // Registro_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +298,6 @@
 
         #endregion
         private System.Windows.Forms.MaskedTextBox TelefonoTextBox;
-        private System.Windows.Forms.MaskedTextBox CedulaTextBox;
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.Label label5;
@@ -317,5 +316,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider IdErrorProvider;
         private System.Windows.Forms.ErrorProvider OtroErrorProvider;
+        private System.Windows.Forms.MaskedTextBox CedulaTextBox;
     }
 }

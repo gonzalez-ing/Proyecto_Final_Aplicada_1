@@ -44,6 +44,6 @@ C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_F
 C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Reportes.ReportesProducto.resources
 C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Registros.Registro_EntradaProductos.resources
 C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Consulta.Consulta_Factura.resources
-C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Reportes.ReportesFacturas.resources
 C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Consulta.Consulta_EntradaProductos.resources
 C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Reportes.ReportesEntradaProducto.resources
+C:\Users\adrianesteban\Desktop\Proyecto Final\Proyecto_Final_Aplicada\Proyecto_Final_Aplicada\obj\Debug\Proyecto_Final_Aplicada.UI.Reportes.ReportesRecibos.resources

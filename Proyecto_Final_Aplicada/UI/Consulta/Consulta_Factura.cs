@@ -74,7 +74,7 @@ namespace Proyecto_Final_Aplicada.UI.Consulta
 
         private void Reportebutton_Click(object sender, EventArgs e)
         {
-            ReportesFacturas abrir = new ReportesFacturas(BLL.FacturasBLL.GetList(filtral));
+            ReportesRecibos abrir = new ReportesRecibos(BLL.FacturasBLL.GetList(filtral));
             abrir.Show();
         }
     }

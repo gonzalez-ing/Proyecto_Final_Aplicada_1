@@ -162,16 +162,6 @@ namespace Proyecto_Final_Aplicada.BLL
             return Convert.ToDecimal(Costo) + Convert.ToDecimal(Ganancia);
         }
 
-        public static string RetornarDescripcion(string nombre)
-        {
-            string descripcion = string.Empty;
-            var lista = GetList(x => x.Descripcion.Equals(nombre));
-            foreach (var item in lista)
-            {
-                descripcion = item.Descripcion;
-            }
 
-            return descripcion;
-        }
     }
 }

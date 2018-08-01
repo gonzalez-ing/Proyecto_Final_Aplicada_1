@@ -69,7 +69,6 @@ create table FacturasDetalle
 	UsuarioId int references Usuarios(UsuarioId),
     ClienteId int references Clientes(ClienteId),
 	ProductoId int references Productos(ProductoId),
-	Producto varchar(50),
 	Cantidad int,
 	Precio decimal,
 	Importe decimal

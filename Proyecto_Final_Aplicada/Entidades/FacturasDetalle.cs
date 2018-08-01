@@ -16,7 +16,6 @@ namespace Proyecto_Final_Aplicada.Entidades
         public int UsuarioId { get; set; }
         public int ClienteId { get; set; }
         public int ProductoId { get; set; }
-        public string Producto { get; set; }
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
         public decimal Importe { get; set; }
@@ -30,20 +29,19 @@ namespace Proyecto_Final_Aplicada.Entidades
             FacturaId = 0;
         }
 
-        public FacturasDetalle(int id, int facturaId, int clienteId, int productoId, string producto, int cantidad, decimal precio, decimal importe)
+        public FacturasDetalle(int id, int facturaId, int clienteId, int productoId, int cantidad, decimal precio, decimal importe)
         {
             this.Id = id;
             this.FacturaId = facturaId;
             this.ClienteId = ClienteId;
             this.ProductoId = productoId;
-            this.Producto = producto;
             this.Cantidad = cantidad;
             this.Precio = precio;
             this.Importe = importe;
             
         }
 
-        public FacturasDetalle(int id, int usuarioId, int clienteId, int facturaId, int productoId, string producto, int cantidad, decimal precio, decimal importe)
+        public FacturasDetalle(int id, int usuarioId, int clienteId, int facturaId, int productoId, int cantidad, decimal precio, decimal importe)
         {
 
             this.Id = 0;
