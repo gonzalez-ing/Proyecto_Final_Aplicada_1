@@ -74,7 +74,6 @@ namespace Proyecto_Final_Aplicada.UI.Registros
                 facturas.AgregarDetalle
                     (ToInt(item.Cells["id"].Value),
                      facturas.FacturaId,
-                       ToInt(item.Cells["ClienteId"].Value),
                        ToInt(item.Cells["ProductoId"].Value),
                        ToInt(item.Cells["cantidad"].Value),
                     Convert.ToDecimal(item.Cells["precio"].Value),
@@ -93,13 +92,13 @@ namespace Proyecto_Final_Aplicada.UI.Registros
             ITBIStextBox.Text = facturas.ITBIS.ToString();
             TotaltextBox.Text = facturas.Total.ToString();
 
-
             DetalledataGridView.DataSource = facturas.Detalle;
 
         }
 
         private void LlenarComboBox()
         {
+
             Repositorio<Usuarios> usuario = new Repositorio<Usuarios>(new Contexto());
             UsuariocomboBox.DataSource = usuario.GetList(c => true);
             UsuariocomboBox.ValueMember = "UsuarioId";
@@ -127,12 +126,12 @@ namespace Proyecto_Final_Aplicada.UI.Registros
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            List<FacturasDetalle> Detalle = new List<FacturasDetalle>();
+            List<FacturasDetalles> Detalle = new List<FacturasDetalles>();
 
 
             if (DetalledataGridView.DataSource != null)
             {
-                Detalle = (List<FacturasDetalle>)DetalledataGridView.DataSource;
+                Detalle = (List<FacturasDetalles>)DetalledataGridView.DataSource;
             }
 
             foreach (var item in BLL.ProductosBLL.GetList(x => x.Inventario < CantidadnumericUpDown.Value))
@@ -150,20 +149,17 @@ namespace Proyecto_Final_Aplicada.UI.Registros
             }
             else
             {
-                Detalle.Add( new FacturasDetalle(
-                           id: 0,
+                Detalle.Add(new FacturasDetalles(id: 0,
                     facturaId: (int)IdnumericUpDown.Value,
-                    clienteId: (int)ClientecomboBox.SelectedValue,
                     productoId: (int)ProductocomboBox.SelectedValue,
                     cantidad: (int)CantidadnumericUpDown.Value,
-                     precio: (decimal)Convert.ToDecimal(PreciotextBox.Text),
-                    importe: (decimal)Convert.ToDecimal(ImportetextBox.Text)
+                     precio: (int)Convert.ToDecimal(PreciotextBox.Text),
+                    importe: (int)Convert.ToDecimal(ImportetextBox.Text)
 
                     ));
 
                 DetalledataGridView.DataSource = null;
                 DetalledataGridView.DataSource = Detalle;
-
 
             }
             decimal SubTotal = 0;
@@ -287,7 +283,7 @@ namespace Proyecto_Final_Aplicada.UI.Registros
             if (DetalledataGridView.Rows.Count > 0 && DetalledataGridView.CurrentRow != null)
             {
 
-                List<FacturasDetalle> Detalle = (List<FacturasDetalle>)DetalledataGridView.DataSource;
+                List<FacturasDetalles> Detalle = (List<FacturasDetalles>)DetalledataGridView.DataSource;
 
 
                 Detalle.RemoveAt(DetalledataGridView.CurrentRow.Index);
@@ -369,5 +365,9 @@ namespace Proyecto_Final_Aplicada.UI.Registros
             abrir.Show();
         }
 
+        private void ClientecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

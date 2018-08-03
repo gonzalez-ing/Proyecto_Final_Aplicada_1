@@ -68,11 +68,14 @@
             // 
             this.Reportebutton.BackColor = System.Drawing.Color.White;
             this.Reportebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reportebutton.Image = global::Proyecto_Final_Aplicada.Properties.Resources.Printer_32x32;
+            this.Reportebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Reportebutton.Location = new System.Drawing.Point(12, 365);
             this.Reportebutton.Name = "Reportebutton";
-            this.Reportebutton.Size = new System.Drawing.Size(80, 38);
+            this.Reportebutton.Size = new System.Drawing.Size(104, 38);
             this.Reportebutton.TabIndex = 75;
             this.Reportebutton.Text = "Reporte";
+            this.Reportebutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Reportebutton.UseVisualStyleBackColor = false;
             this.Reportebutton.Click += new System.EventHandler(this.Reportebutton_Click);
             // 

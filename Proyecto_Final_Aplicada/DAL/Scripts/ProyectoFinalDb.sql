@@ -62,12 +62,10 @@ create table Facturas
 );
 
 go
-create table FacturasDetalle
+create table FacturasDetalles
 (
 	Id int primary key identity(1,1),
 	FacturaId int references Facturas(FacturaId),
-	UsuarioId int references Usuarios(UsuarioId),
-    ClienteId int references Clientes(ClienteId),
 	ProductoId int references Productos(ProductoId),
 	Cantidad int,
 	Precio decimal,
@@ -81,4 +79,7 @@ select * from Clientes;
 select * from Productos;
 select * from EntradaProductos;
 select * from Facturas;
-select * from FacturasDetalle;
+select * from FacturasDetalles;
+
+
+--DROP TABLE Usuarios;

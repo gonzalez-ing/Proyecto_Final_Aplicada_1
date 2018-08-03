@@ -70,7 +70,7 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\EntradaProductos.cs" />
     <Compile Include="Entidades\Facturas.cs" />
-    <Compile Include="Entidades\FacturasDetalle.cs" />
+    <Compile Include="Entidades\FacturasDetalles.cs" />
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Menu.cs">
@@ -315,6 +315,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\ProyectoFinalDb.sql" />
+    <None Include="Resources\Printer-32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

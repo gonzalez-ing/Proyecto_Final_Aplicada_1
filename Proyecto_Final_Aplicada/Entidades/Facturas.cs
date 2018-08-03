@@ -17,9 +17,9 @@ namespace Proyecto_Final_Aplicada.Entidades
         public decimal ITBIS { get; set; }
         public decimal Total { get; set; }
 
-        public virtual ICollection<FacturasDetalle> Detalle { get; set; }
+        public virtual ICollection<FacturasDetalles> Detalle { get; set; }
 
-        public Facturas(int Facturaid, int clienteId, DateTime fecha, decimal subtotal, decimal itbis, decimal total, List<FacturasDetalle> detalle)
+        public Facturas(int Facturaid, int clienteId, DateTime fecha, decimal subtotal, decimal itbis, decimal total, List<FacturasDetalles> detalle)
         {
             this.FacturaId = Facturaid;
             this.ClienteId = clienteId;
@@ -38,12 +38,12 @@ namespace Proyecto_Final_Aplicada.Entidades
             this.Subtotal = 0;
             this.ITBIS = 0;
             this.Total = 0;
-            Detalle = new List<FacturasDetalle>();
+            Detalle = new List<FacturasDetalles>();
         }
 
-        public void AgregarDetalle(int id, int FacturaId, int ClienteId, int ProductoId,  int cantidad, decimal precio, int importe)
+        public void AgregarDetalle(int id, int FacturaId, int ProductoId,  int cantidad, decimal precio, int importe)
         {
-            this.Detalle.Add(new FacturasDetalle(id, FacturaId, ClienteId, ProductoId, cantidad, precio, importe));
+            this.Detalle.Add(new FacturasDetalles(id, FacturaId, ProductoId, cantidad, precio, importe));
         }
     }
 }

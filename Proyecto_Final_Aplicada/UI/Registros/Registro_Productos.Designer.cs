@@ -167,8 +167,8 @@
             // 
             this.IdnumericUpDown.Location = new System.Drawing.Point(107, 76);
             this.IdnumericUpDown.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
+            276447231,
+            23283,
             0,
             0});
             this.IdnumericUpDown.Name = "IdnumericUpDown";
@@ -212,13 +212,13 @@
             // 
             this.GanancianumericUpDown.Location = new System.Drawing.Point(267, 223);
             this.GanancianumericUpDown.Maximum = new decimal(new int[] {
-            999999999,
-            0,
+            -727379969,
+            232,
             0,
             0});
             this.GanancianumericUpDown.Name = "GanancianumericUpDown";
             this.GanancianumericUpDown.Size = new System.Drawing.Size(99, 20);
-            this.GanancianumericUpDown.TabIndex = 157;
+            this.GanancianumericUpDown.TabIndex = 156;
             this.GanancianumericUpDown.ValueChanged += new System.EventHandler(this.GanancianumericUpDown_ValueChanged);
             // 
             // InventariotextBox
@@ -233,11 +233,12 @@
             // 
             this.PrecionumericUpDown.Location = new System.Drawing.Point(81, 276);
             this.PrecionumericUpDown.Maximum = new decimal(new int[] {
-            999999999,
-            0,
+            1316134911,
+            2328,
             0,
             0});
             this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.ReadOnly = true;
             this.PrecionumericUpDown.Size = new System.Drawing.Size(99, 20);
             this.PrecionumericUpDown.TabIndex = 158;
             this.PrecionumericUpDown.ValueChanged += new System.EventHandler(this.PrecionumericUpDown_ValueChanged);
@@ -246,8 +247,8 @@
             // 
             this.CostonumericUpDown.Location = new System.Drawing.Point(81, 223);
             this.CostonumericUpDown.Maximum = new decimal(new int[] {
-            99999999,
-            0,
+            -727379969,
+            232,
             0,
             0});
             this.CostonumericUpDown.Name = "CostonumericUpDown";

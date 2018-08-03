@@ -58,25 +58,29 @@ namespace Proyecto_Final_Aplicada.BLL
         public static bool Eliminar(int id)
         {
             bool paso = false;
-
             Contexto contexto = new Contexto();
+
             try
             {
                 Clientes clientes = contexto.clientes.Find(id);
 
-                contexto.clientes.Remove(clientes);
-
+                if (clientes != null)
+                {
+                    contexto.Entry(clientes).State = EntityState.Deleted;
+                }
                 if (contexto.SaveChanges() > 0)
                 {
                     paso = true;
+                    contexto.Dispose();
+
                 }
-                contexto.Dispose();
+
             }
             catch (Exception)
             {
-
                 throw;
             }
+
             return paso;
         }
 

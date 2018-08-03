@@ -103,6 +103,16 @@ namespace Proyecto_Final_Aplicada.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Printer_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Printer-32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UserNoSign {
             get {
                 object obj = ResourceManager.GetObject("UserNoSign", resourceCulture);

@@ -18,7 +18,7 @@ namespace Proyecto_Final_Aplicada.BLL
             Contexto contexto = new Contexto();
 
 
-            Clientes clientes = new Clientes();
+            Clientes Cliente = new Clientes();
             try
             {
                 if (contexto.factura.Add(facturas) != null)
@@ -48,20 +48,21 @@ namespace Proyecto_Final_Aplicada.BLL
 
             try
             {
-                Facturas facturas = contexto.factura.Find(id);
+                Facturas Factura = contexto.factura.Find(id);
 
 
-                if (facturas != null)
+                if (Factura != null)
                 {
-                    foreach (var item in facturas.Detalle)
+                    foreach (var item in Factura.Detalle)
                     {
                         contexto.producto.Find(item.ProductoId).Inventario += item.Cantidad;
 
                     }
 
-                    facturas.Detalle.Count();
-                    contexto.factura.Remove(facturas);
+                    Factura.Detalle.Count();
+                    contexto.factura.Remove(Factura);
                 }
+
 
                 if (contexto.SaveChanges() > 0)
                 {
@@ -69,6 +70,7 @@ namespace Proyecto_Final_Aplicada.BLL
                     paso = true;
                 }
                 contexto.Dispose();
+
 
             }
             catch (Exception)
@@ -80,21 +82,15 @@ namespace Proyecto_Final_Aplicada.BLL
 
         public static Facturas Buscar(int id)
         {
-            Facturas facturas = new Facturas();
+            Facturas Factura = new Facturas();
             Contexto contexto = new Contexto();
 
             try
             {
-                facturas = contexto.factura.Find(id);
-                if (facturas != null)
+                Factura = contexto.factura.Find(id);
+                if (Factura != null)
                 {
-                    facturas.Detalle.Count();
-
-                    foreach (var item in facturas.Detalle)
-                    {
-
-                        string s = item.Productos.Descripcion;
-                    }
+                    Factura.Detalle.Count();
 
                 }
                 contexto.Dispose();
@@ -103,66 +99,38 @@ namespace Proyecto_Final_Aplicada.BLL
             {
                 throw;
             }
-            return facturas;
+            return Factura;
         }
 
         public static bool Modificar(Facturas facturas)
         {
-
-            bool paso = false;
+            bool paso = true;
             Contexto contexto = new Contexto();
-
             try
             {
-                var factura = BLL.FacturasBLL.Buscar(facturas.FacturaId);
-
-
-                if (facturas != null)
+                int sum = 0;
+                int sumTotal = 0;
+                foreach (var item in facturas.Detalle)
                 {
+                    var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
+                    contexto.Entry(item).State = estado;
 
-
-                    foreach (var item in facturas.Detalle)
-                    {
-
-                        contexto.producto.Find(item.ProductoId).Inventario += item.Cantidad;
-
-                        if (!facturas.Detalle.ToList().Exists(v => v.Id == item.Id))
-                        {
-
-                            item.Productos = null;
-                            contexto.Entry(item).State = EntityState.Deleted;
-                        }
-
-                    }
-
-
-                    foreach (var item in facturas.Detalle)
-                    {
-                        contexto.producto.Find(item.ProductoId).Inventario -= item.Cantidad;
-
-                        var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
-                        contexto.Entry(item).State = estado;
-                    }
-
-                    Facturas Anterior = BLL.FacturasBLL.Buscar(facturas.FacturaId);
-
-                    decimal diferencia;
-
-                    diferencia = facturas.Total - Anterior.Total;
-
-                    Productos productos = BLL.ProductosBLL.Buscar(facturas.FacturaId);
-                    BLL.ProductosBLL.Modificar(productos);
-
-                    contexto.Entry(facturas).State = EntityState.Modified;
+                    sum += item.Cantidad;
+                    sumTotal += Convert.ToInt32(item.Importe);
+                    contexto.producto.Find(item.ProductoId).Inventario -= sum;
                 }
 
+                contexto.Entry(facturas).State = EntityState.Modified;
                 if (contexto.SaveChanges() > 0)
                 {
                     paso = true;
                 }
                 contexto.Dispose();
             }
-            catch (Exception) { throw; }
+            catch (Exception)
+            {
+                throw;
+            }
             return paso;
         }
 

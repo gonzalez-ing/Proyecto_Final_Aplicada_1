@@ -112,6 +112,7 @@
             // 
             this.PreciotextBox.Location = new System.Drawing.Point(9, 107);
             this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.ReadOnly = true;
             this.PreciotextBox.Size = new System.Drawing.Size(160, 22);
             this.PreciotextBox.TabIndex = 91;
             // 
@@ -223,6 +224,7 @@
             this.ClientecomboBox.Name = "ClientecomboBox";
             this.ClientecomboBox.Size = new System.Drawing.Size(171, 24);
             this.ClientecomboBox.TabIndex = 75;
+            this.ClientecomboBox.SelectedIndexChanged += new System.EventHandler(this.ClientecomboBox_SelectedIndexChanged);
             // 
             // IdnumericUpDown
             // 
@@ -245,7 +247,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 136);
+            this.label3.Location = new System.Drawing.Point(29, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 68;
@@ -255,7 +257,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 62);
+            this.label2.Location = new System.Drawing.Point(34, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 67;
@@ -265,7 +267,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(6, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 66;
@@ -357,11 +359,11 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 97);
+            this.label4.Location = new System.Drawing.Point(23, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 148;
-            this.label4.Text = "Empleado";
+            this.label4.Text = "Usuario";
             // 
             // ITBIStextBox
             // 
